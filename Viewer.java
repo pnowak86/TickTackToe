@@ -5,12 +5,19 @@ package TickTackToe;
  */
 public class Viewer {
     Game game;
+    int coutner;
     public void view(Game game){
         for (int i = 0; i < 3 ; i++) {
             for (int j = 0; j < 3; j++) {
-                System.out.print(game.board[i][j].getMark()+" ");
+                if (coutner==1){
+                    System.out.print("| "+ game.board[i][j].getMark()+ " |");
+                }
+                else System.out.print(" "+ game.board[i][j].getMark()+ " ");
+                coutner++;
             }
-            System.out.println();
+            coutner=0;
+            if (i!=2){
+                System.out.println("\n"+"---+---+---");}
         }
     }
 }

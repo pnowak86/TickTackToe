@@ -16,13 +16,13 @@ public class App
         Game game = new Game();
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j <3 ; j++) {
-                game.board[i][j] = new BoardField("E");
+                game.board[i][j] = new BoardField(" ");
             }
         }
         Viewer viewer = new Viewer();
         while(isGameDone==false){
         viewer.view(game);
-        System.out.println("Which player is making move?(0/1)");
+        System.out.println("\n"+"Which player is making move?(0/1)");
         int player = scanner1.nextInt();
         System.out.println("Which mark you want to use?(X/O)");
         String mark = scanner.nextLine();

@@ -16,7 +16,7 @@ public class Game {
 
     boolean makeMove(int x, int y, int playerWho, String markUsed) {
 
-        if ((board[x][y].mark != "E")) {
+        if ((board[x][y].mark != " ")) {
             return false;
         }
         if (playerWhoTemp == playerWho) {
